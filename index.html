@@ -1,64 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crane Design Report - ENGI 2203</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Final Design Report for Crane Project in ENGI 2203 by Group 06.">
-    <meta name="keywords" content="Crane Design, Engineering, ENGI 2203, Design Report">
-    <meta name="author" content="Shazil Khan">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crane Design Project - ENGI 2203 | Shazil Khan</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Final Design Report for Crane Project in ENGI 2203 by Group 06.">
+  <meta name="keywords" content="Crane Design, Engineering, ENGI 2203, Design Report">
+  <meta name="author" content="Shazil Khan">
 </head>
 <body>
 
   <!-- HEADER SECTION -->
   <header class="project-header">
-    <h1>Crane Design Project - ENGI 2203</h1>
-    <p>Final Design Report by Group 06.</p>
+    <h1>Crane Design Project (ENGI 2203)</h1>
+    <p>Final Design Report by Group 06</p>
   </header>
 
   <!-- OVERVIEW SECTION -->
   <section id="overview">
-    <h2>Abstract</h2>
+    <h2>Project Overview</h2>
     <p>
-      In the real-life installation of wind turbines, cranes play a crucial role in the building process. For this installation, a variety of crane types can be used, but all must be able to fulfill the same tasks: pick up the load of a rotor without damaging it and place it with precision into the hub. For our design problem, we were tasked with creating a miniature-scale crane with given materials and placing a rotor inside a hub at a set location. The purpose of this project was to further our understanding of materials, dynamics, and statics and implement our classroom knowledge into a real-life situation through a mock engineering design project.
+      This crane design project, completed for ENGI 2203, focuses on creating a 
+      miniature-scale crane capable of lifting, transporting, and placing a rotor 
+      within a wind turbine hub. Built with limited materials and under strict size 
+      and weight constraints, the crane simulates real-world engineering considerations 
+      in wind turbine installation and demonstrates proficiency in materials, dynamics, 
+      and statics.
     </p>
   </section>
 
-  <!-- FEATURES SECTION -->
-  <section id="features">
-    <h2>Summary of Problem</h2>
-    <h3>Background</h3>
+  <!-- MY ROLE & CONTRIBUTIONS (NEW) -->
+  <section id="my-role">
+    <h2>My Role & Key Contributions</h2>
+    <ul>
+      <li><strong>Conceptual Design & Analysis:</strong> Contributed to brainstorming crane 
+        mechanisms (mobile vs. tower crane) and performed initial torque, moment, and 
+        stability calculations.</li>
+      <li><strong>Report Compilation & Editing:</strong> Coordinated the writing of the 
+        final design report, ensuring requirements, constraints, and design logic 
+        were clearly explained.</li>
+      <li><strong>CAD & Rapid Prototyping Liaison:</strong> Communicated with TAs for 
+        3D-printed components (rack & pinion, rotor holder) and integrated them into 
+        the design plan.</li>
+      <li><strong>Build & Assembly:</strong> Assisted with base assembly (wheel mechanism) 
+        and tower assembly to ensure the crane fit within the 4x4 foot area.</li>
+    </ul>
+  </section>
+
+  <!-- PROBLEM & REQUIREMENTS SECTION (REVISED) -->
+  <section id="problem">
+    <h2>Problem & Requirements</h2>
+    <h3>Summary of the Problem</h3>
     <p>
-      A crane is an extremely useful and powerful machine that is able to pick up and rotate heavy objects off the ground, transport said objects to the target site, and attach or fix them into the desired position. A crane is typically mounted with a hoist rope, wire ropes, or chains and sheaves. Cranes are typically used in the civil engineering and construction industries for the construction of bridges, tracks, and high-placement structures.
+      Cranes are crucial for constructing wind turbines, lifting rotor assemblies 
+      without damage. Our task was to build a scale model using a predefined kit 
+      plus limited 3D-printed parts. The crane needed to pick a 223g rotor from 
+      a 4x4 foot area (2.36" off ground) and place it precisely in a hub 
+      at 18.9" height—without external interaction or dragging.
     </p>
-    
-    <h3>Problem Statement</h3>
-    <p>
-      To design and build a crane device that can pick up and insert a rotor weighing 223 grams in a horizontal orientation from a location 1 foot by 1 foot from the corner of a 4x4 foot area lying 2.36 inches off the ground. The rotor then must be placed into a wind turbine base centered 3 feet away from the edge of the 4x4 foot area at a height of 18.9 inches off the ground. In addition, the crane must be able to take the rotor out of the hub and place it back on the ground.
-    </p>
-    
+
     <h3>Constraints</h3>
-    <p>
-      The crane device can only be made of materials given in the kit as specified in the design kit PDF. In addition to these items, each team is allotted 15 cubic inches of rapid prototyping material for custom parts. The crane device must fit within a 4 by 4-foot area with space for both the rotor blade and turbine hub to sit. After attaching the rotor to the device, no external interaction is allowed until the rotor is placed within the hub. The rotor must not be dragged along the ground and must be undamaged when placed within the hub.
-    </p>
-    
+    <ul>
+      <li>Only kit materials + 15 cubic inches of rapid prototyping material.</li>
+      <li>Must fit in a 4x4 foot zone, accommodate rotor (17.52" blade) and hub (6.29" x 4.72").</li>
+      <li>No external interaction after initial placement of rotor in crane grip.</li>
+      <li>Crane must not tip over with or without the 2.18N rotor load.</li>
+    </ul>
+
     <h3>Requirements</h3>
     <ul>
-      <li>The crane design must be able to stand without tipping with and without the 2.18N load of the rotor.</li>
-      <li>The crane design must be ready for the qualifying stage on March 16th and final competition on March 30th.</li>
-      <li>The crane may not drag the rotor on the ground.</li>
-      <li>The crane must fit within the 4x4 foot area with space for the 17.52-inch blade rotor and the 6.29x4.72-inch hub base.</li>
-      <li>The crane must be able to place the rotor in the hub without external forces.</li>
-      <li>The crane must be able to complete all tasks safely.</li>
+      <li>Lift and place the rotor safely inside the hub.</li>
+      <li>Operate without damaging the rotor or dragging it on the ground.</li>
+      <li>Standalone operation (no external forces beyond initial setup).</li>
+      <li>Must be competition-ready on specified dates.</li>
+    </ul>
+  </section>
+
+  <!-- DESIGN CONCEPT SECTION -->
+  <section id="design-concept">
+    <h2>Design Concept</h2>
+    <p>
+      Our final crane is a hybrid between a mobile crane (for movement on wheels) 
+      and a tower crane (for vertical height). Key subsystems include:
+    </p>
+    <ol>
+      <li><strong>Base Movement Mechanism:</strong> A skid-steer approach using two front 
+          wheels driven by independent motors for rotation and precise positioning.</li>
+      <li><strong>Rotor Pick-Up Mechanism:</strong> A rotating “finger joint” on the boom 
+          arm that clamps onto the rotor, then pivots to correctly align it for hub insertion.</li>
+      <li><strong>Vertical Movement (Rack & Pinion):</strong> The crane arm ascends or descends 
+          along a 3D-printed rack mounted on the tower, driven by a motor-powered pinion for 
+          precise vertical placement.</li>
+    </ol>
+  </section>
+
+  <!-- CHALLENGES & OUTCOMES SECTION -->
+  <section id="challenges">
+    <h2>Challenges & Outcomes</h2>
+    <ul>
+      <li>
+        <strong>Stability vs. Mobility:</strong> Balancing a lightweight design with enough 
+        counterweight to stay upright when lifting the rotor.  
+        <br><em>Outcome:</em> Used a skid-steer base with well-placed support towers and 
+        verified through moment calculations.
+      </li>
+      <li>
+        <strong>3D-Printed Parts Dependency:</strong> Delays in receiving critical printed 
+        parts (rack, pinion, rotor bracket) stalled final testing.  
+        <br><em>Outcome:</em> Created contingency plans for part breakage and tested partial 
+        prototypes to ensure correct tolerances.
+      </li>
+      <li>
+        <strong>Rotor Orientation:</strong> Needed a reliable mechanism to rotate the rotor 
+        from horizontal to vertical.  
+        <br><em>Outcome:</em> Switched from a complex pulley-based system to a simpler 
+        rotating finger joint, reducing build complexity and potential failure points.
+      </li>
     </ul>
   </section>
 
   <!-- DEMO SECTION -->
   <section id="demo">
-    <h2>Demo</h2>
+    <h2>Demo & Report</h2>
     <img src="crane_project.png" alt="Crane Design Project Screenshot" class="project-image">
-    <p>Screenshot of the Crane Design system in action.</p>
+    <p> 
+      Above is a snapshot of our crane’s partially assembled base and tower. 
+      <a href="crane_final_report.pdf" target="_blank">Download the full final report (PDF)</a> 
+      for detailed CAD drawings, assembly instructions, and FBD calculations.
+    </p>
   </section>
 
   <!-- LINKS SECTION -->
@@ -67,12 +137,14 @@
     <a href="https://github.com/shazil343/crane-design" target="_blank" class="btn">GitHub Repository</a>
   </section>
 
-     </section>
-
   <!-- CONTACT SECTION -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Feel free to reach out to me via email at <a href="mailto:shazil.khan@ucalgary.ca">shazil.khan@ucalgary.ca</a> or connect with me on <a href="https://www.linkedin.com/in/shazilfkhan" target="_blank">LinkedIn</a>.</p>
+    <p>
+      Feel free to reach out via email at
+      <a href="mailto:shazil.khan@ucalgary.ca">shazil.khan@ucalgary.ca</a> or connect with me on
+      <a href="https://www.linkedin.com/in/shazilfkhan" target="_blank">LinkedIn</a>.
+    </p>
   </section>
 
   <!-- FOOTER -->
@@ -82,5 +154,6 @@
 
 </body>
 </html>
+
 
 

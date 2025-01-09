@@ -65,24 +65,27 @@ section ul, section ol {
   margin-bottom: 10px;
 }
 
-/* TECHNOLOGIES USED SECTION */
-.tech-icons {
+/* GALLERY SECTION */
+.gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: center; /* horizontally aligns images */
+  margin-top: 20px;
 }
 
-.tech {
+.gallery figure {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 300px; /* limit figure width so they don't stretch too large */
 }
 
-.tech-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 5px;
+.gallery figcaption {
+  font-size: 0.9rem;
+  color: #d1d1d1;
+  margin-top: 8px;
+  text-align: center;
 }
 
 /* LINKS SECTION */
@@ -130,9 +133,8 @@ footer {
   section p, section ul, section ol, .btn {
     font-size: 1rem;
   }
-  .tech-icons {
-    flex-direction: column;
-    align-items: center;
+  .gallery figure {
+    max-width: 200px;
   }
 }
 
